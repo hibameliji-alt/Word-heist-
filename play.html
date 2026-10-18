@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Play – Word Heist</title>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head><body>
+<header class="top"><a class="brand" href="/">Word<span>Heist</span></a><a href="/">Home</a></header>
+<main class="wrap">
+  <p id="msg" role="status" aria-live="polite">Crack the code.</p>
+  <div id="board" aria-label="Guess board"></div>
+  <div id="kb"></div>
+  <section id="end" class="panel">
+    <h2 id="endTitle"></h2>
+    <pre id="grid"></pre>
+    <button class="btn" id="share">Copy result</button>
+    <a class="btn ghost" href="/">Home</a>
+  </section>
+</main>
+<script src="words.js"></script>
+<script src="game.js"></script>
+</body></html>

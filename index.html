@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Word Heist – crack one vault a day</title>
+<meta name="description" content="A daily 5-letter word game. Crack the vault before the alarm trips.">
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head><body>
+<header class="top"><a class="brand" href="/">Word<span>Heist</span></a><a href="play.html">Play</a></header>
+<main class="wrap">
+  <section class="hero">
+    <h1>One vault.<br>Six tries.</h1>
+    <p>Guess today's 5-letter code. Every wrong guess sets off the lasers and locks two keys.</p>
+    <a class="btn" href="play.html" id="playBtn">Crack today's vault</a>
+  </section>
+  <section class="panel">
+    <div class="stats">
+      <div class="stat"><b id="streak">0</b><small>Day streak</small></div>
+      <div class="stat"><b id="best">0</b><small>Best streak</small></div>
+      <div class="stat"><b id="wins">0</b><small>Vaults cracked</small></div>
+    </div>
+  </section>
+  <section class="panel">
+    <h2>How to play</h2>
+    <ul>
+      <li>Type a 5-letter word and press Enter.</li>
+      <li>Green means right letter, right spot. Gold means right letter, wrong spot. Grey means not in the code.</li>
+      <li>After each guess, 2 keys are locked for your next try.</li>
+    </ul>
+    <div class="sample" aria-label="Example"><i class="h">V</i><i class="n">A</i><i>L</i><i>U</i><i class="n">E</i></div>
+  </section>
+</main>
+<footer>A new vault opens every day at midnight.</footer>
+<script>
+try{const s=JSON.parse(localStorage.getItem("wh-stats")||"{}");
+streak.textContent=s.streak||0;best.textContent=s.best||0;wins.textContent=s.wins||0;
+if(s.last===new Date().toDateString()){playBtn.textContent="See today's result"}}catch(e){}
+</script>
+</body></html>
